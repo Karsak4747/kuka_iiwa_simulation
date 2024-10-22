@@ -1,5 +1,5 @@
 Запускается командой
-"""bash
+"""shell
 docker-compose up --build
 """
 Для Windows нужно установить эту программу https://sourceforge.net/projects/vcxsrv/
