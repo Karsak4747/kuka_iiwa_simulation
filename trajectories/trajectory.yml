@@ -1,0 +1,18 @@
+trajectory:
+  joint_names:
+    - joint_a1
+    - joint_a2
+    - joint_a3
+    - joint_a4
+    - joint_a5
+    - joint_a6
+    - joint_a7
+  points:
+    - positions: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      time_from_start: 
+        sec: 2
+        nanosec: 0
+    - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      time_from_start:
+        sec: 5
+        nanosec: 0

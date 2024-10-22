@@ -20,7 +20,8 @@ RUN git clone https://github.com/ICube-Robotics/iiwa_ros2.git
 
 # Устанавливаем зависимости, если они указаны в package.xml
 WORKDIR /root/ros2_ws
-RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y
+RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && pip install pyyaml
+
 
 # Сборка ROS2 пакетов и плагинов
 RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build --parallel-workers 4"
@@ -29,6 +30,6 @@ RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build --parallel-w
 RUN echo "source /root/ros2_ws/install/setup.bash" >> ~/.bashrc
 
 RUN /bin/bash -c "source /usr/share/gazebo/setup.sh && export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/root/iiwa_ros2"
-
+COPY trajectories /root/trajectories
 # Запуск контейнера в интерактивном режиме с шеллом
 CMD ["/bin/bash"]

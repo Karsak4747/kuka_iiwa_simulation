@@ -9,3 +9,14 @@ docker-compose up --build
 - Start no client
 - Clipboard
 - Disable access control
+
+Нстройка симуляции:
+1. Текущее положение звеньев
+```shell
+ros2 topic echo /joint_states
+```
+2. Запуск траектории
+```shell
+cd ../trajectories
+python3 send_trajectory.py trajectory.yml
+```
