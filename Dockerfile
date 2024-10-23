@@ -14,13 +14,12 @@ RUN apt-get update && apt-get install -y \
     ros-humble-moveit-ros-planning \
     ros-humble-moveit-ros-move-group
 
-# Клонируем и устанавливаем плагин iiwa_ros2
-WORKDIR /root/ros2_ws/src
-RUN git clone https://github.com/ICube-Robotics/iiwa_ros2.git
+# Копирование и устанавливка плагина iiwa_ros2
+COPY iiwa_ros2 /root/ros2_ws/src/iiwa_ros2
 
 # Устанавливаем зависимости, если они указаны в package.xml
 WORKDIR /root/ros2_ws
-RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && pip install pyyaml
+RUN apt-get update && rosdep install --from-paths src --ignore-src -r -y && pip install pyyaml && apt-get install nano
 
 
 # Сборка ROS2 пакетов и плагинов
@@ -30,6 +29,8 @@ RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build --parallel-w
 RUN echo "source /root/ros2_ws/install/setup.bash" >> ~/.bashrc
 
 RUN /bin/bash -c "source /usr/share/gazebo/setup.sh && export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/root/iiwa_ros2"
+
+# Копирование файлов для конкурса
 COPY trajectories /root/trajectories
 # Запуск контейнера в интерактивном режиме с шеллом
 CMD ["/bin/bash"]

@@ -8,11 +8,16 @@ trajectory:
     - joint_a6
     - joint_a7
   points:
-    - positions: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    - positions: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
       time_from_start: 
-        sec: 2
+        sec: 5
         nanosec: 0
     - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
       time_from_start:
-        sec: 5
+        sec: 10
         nanosec: 0
+    - positions: [0.0, -0.785, -1.066, 1.396, 7.394, 0.611, -1.533]
+      time_from_start:
+        sec: 15
+        nanosec: 0
+
