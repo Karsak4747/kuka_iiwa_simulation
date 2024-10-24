@@ -7,11 +7,11 @@ services:
     container_name: ros2_iiwa
     environment:
       - DISPLAY=host.docker.internal:0
-    volumes:
-      - ros2_ws_data:/root/ros2_ws
+#    volumes:
+#      - ros2_ws_data:/root/ros2_ws
     devices:
       - /dev/dri:/dev/dri
-    command: bash -c "source /opt/ros/humble/setup.bash && source /root/ros2_ws/install/setup.bash && export DISPLAY=host.docker.internal:0 && export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/root/iiwa_ros2 && source /usr/share/gazebo/setup.sh && ros2 launch iiwa_bringup iiwa.launch.py use_sim:="true""
+    command: bash -c "source /opt/ros/humble/setup.bash && source /root/ros2_ws/install/setup.bash && export DISPLAY=host.docker.internal:0 && export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/root/iiwa_ros2 && source /usr/share/gazebo/setup.sh && ros2 launch iiwa_bringup iiwa.launch.py use_sim:="true" && gzserver --verbose -s --disable-audio"
 
-volumes:
-  ros2_ws_data:
+#volumes:
+#  ros2_ws_data:

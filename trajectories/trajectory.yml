@@ -8,16 +8,76 @@ trajectory:
     - joint_a6
     - joint_a7
   points:
-    - positions: [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0]
-      time_from_start: 
+    - positions: [-1.5, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 2
+        nanosec: 0
+    - positions: [0.0, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
         sec: 5
         nanosec: 0
-    - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -3.14]
       time_from_start:
-        sec: 10
+        sec: 8
         nanosec: 0
-    - positions: [0.0, -0.785, -1.066, 1.396, 7.394, 0.611, -1.533]
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -1.3]
       time_from_start:
-        sec: 15
+        sec: 11
+        nanosec: 0
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -1.3]
+      time_from_start:
+        sec: 16
+        nanosec: 0
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -3.14]
+      time_from_start:
+        sec: 19
+        nanosec: 0
+    - positions: [0.0, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 22
+        nanosec: 0
+    - positions: [1.5, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 25
+        nanosec: 0
+    - positions: [1.5, -1.3, 0.0, 2.0, 7.394, -1.6, -3.14]
+      time_from_start:
+        sec: 28
+        nanosec: 0
+    - positions: [1.5, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 31
+        nanosec: 0
+    - positions: [0.0, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 34
+        nanosec: 0
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -3.14]
+      time_from_start:
+        sec: 37
+        nanosec: 0
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -1.3]
+      time_from_start:
+        sec: 40
+        nanosec: 0
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -1.3]
+      time_from_start:
+        sec: 45
+        nanosec: 0
+    - positions: [0.0, -1.0, 0.0, 2.0, 7.394, -1.3, -3.14]
+      time_from_start:
+        sec: 48
+        nanosec: 0
+    - positions: [0.0, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 51
+        nanosec: 0
+    - positions: [-1.5, -0.6, 0.0, 2.0, 7.394, -1.0, -3.14]
+      time_from_start:
+        sec: 54
+        nanosec: 0
+    - positions: [-1.5, -1.3, 0.0, 2.0, 7.394, -1.6, -3.14]
+      time_from_start:
+        sec: 57
         nanosec: 0
 

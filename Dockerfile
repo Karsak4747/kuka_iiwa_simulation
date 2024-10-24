@@ -28,6 +28,9 @@ RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build --parallel-w
 # Настройка среды
 RUN echo "source /root/ros2_ws/install/setup.bash" >> ~/.bashrc
 
+#RUN /bin/bash -c "source /usr/share/gazebo/setup.sh && cmake /root/ros2_ws/src/iiwa_ros2/iiwa_description/CMakeLists.txt"
+
+
 RUN /bin/bash -c "source /usr/share/gazebo/setup.sh && export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/root/iiwa_ros2"
 
 # Копирование файлов для конкурса
