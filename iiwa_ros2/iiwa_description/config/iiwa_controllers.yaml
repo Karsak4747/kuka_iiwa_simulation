@@ -32,6 +32,8 @@ iiwa_arm_controller:
       - joint_a5
       - joint_a6
       - joint_a7
+      - joint_finger_1
+      - joint_finger_2
 
     state_publish_rate: 200.0 # Defaults to 50
     action_monitor_rate: 20.0 # Defaults to 20
@@ -46,6 +48,8 @@ velocity_controller:
       - joint_a5
       - joint_a6
       - joint_a7
+      - joint_finger_1
+      - joint_finger_2
 
 impedance_controller:
   ros__parameters:
@@ -57,6 +61,8 @@ impedance_controller:
       - joint_a5
       - joint_a6
       - joint_a7
+      - joint_finger_1
+      - joint_finger_2
     stiffness: [50.0, 50.0, 50.0, 50.0, 50.0, 50.0, 50.0]
     damping: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
 

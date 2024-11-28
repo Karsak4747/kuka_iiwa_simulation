@@ -59,6 +59,20 @@
                     <param name="max">3.05</param>
                 <state_interface name="position"/>
             </joint>
+            <joint name="joint_finger_1">
+                <param name="initial_position">${initial_positions['joint_finger_1']}</param>
+                <command_interface name="position" />
+                    <param name="min">0.0</param>
+                    <param name="max">0.033</param>
+                <state_interface name="position"/>
+            </joint>
+            <joint name="joint_finger_2">
+                <param name="initial_position">${initial_positions['joint_finger_2']}</param>
+                <command_interface name="position" />
+                    <param name="min">-0.033</param>
+                    <param name="max">0.0</param>
+                <state_interface name="position"/>
+            </joint>
         </ros2_control>
 
     </xacro:macro>

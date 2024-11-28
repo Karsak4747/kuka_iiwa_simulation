@@ -51,3 +51,13 @@
           max_velocity: 2.3562
           has_acceleration_limits: true
           max_acceleration: 5.0
+        joint_finger_1:
+          has_velocity_limits: true
+          max_velocity: 2.3562
+          has_acceleration_limits: true
+          max_acceleration: 5.0
+        joint_finger_2:
+          has_velocity_limits: true
+          max_velocity: 2.3562
+          has_acceleration_limits: true
+          max_acceleration: 5.0

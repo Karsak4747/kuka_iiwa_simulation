@@ -3,7 +3,7 @@
   <xacro:macro name="iiwa_srdf" params="name prefix">
     
     <group name="${prefix}${name}_arm">
-        <chain base_link="${prefix}iiwa_base" tip_link="${prefix}joint_finger_1" />
+        <chain base_link="${prefix}iiwa_base" tip_link="${prefix}tool0" />
     </group>
 
     <group_state name="ready" group="${prefix}${name}_arm">
@@ -14,7 +14,8 @@
         <joint name="${prefix}joint_a5" value="0"/>
         <joint name="${prefix}joint_a6" value="1.571"/>
         <joint name="${prefix}joint_a7" value="0.785"/>
-        <joint name="${prefix}joint_a7-tool0" value="0"/>
+        <joint name="${prefix}joint_finger_1" value="0"/>
+        <joint name="${prefix}joint_finger_2" value="0"/>
     </group_state>
     <virtual_joint child_link="${prefix}iiwa_base" name="virtual_joint" parent_frame="world" type="floating"/>
 
@@ -34,6 +35,7 @@
     <disable_collisions link1="${prefix}link_1" link2="${prefix}link_7" reason="Never" />
     <disable_collisions link1="${prefix}link_1" link2="${prefix}tool0" reason="Never" />
     <disable_collisions link1="${prefix}link_1" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_1" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}link_2" link2="${prefix}link_3" reason="Adjacent" />
     <disable_collisions link1="${prefix}link_2" link2="${prefix}link_4" reason="Never" />
     <disable_collisions link1="${prefix}link_2" link2="${prefix}link_5" reason="Never" />
@@ -41,27 +43,36 @@
     <disable_collisions link1="${prefix}link_2" link2="${prefix}link_7" reason="Never" />
     <disable_collisions link1="${prefix}link_2" link2="${prefix}tool0" reason="Never" />
     <disable_collisions link1="${prefix}link_2" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_2" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}link_3" link2="${prefix}link_4" reason="Adjacent" />
     <disable_collisions link1="${prefix}link_3" link2="${prefix}link_5" reason="Never" />
     <disable_collisions link1="${prefix}link_3" link2="${prefix}link_6" reason="Never" />
     <disable_collisions link1="${prefix}link_3" link2="${prefix}link_7" reason="Never" />
     <disable_collisions link1="${prefix}link_3" link2="${prefix}tool0" reason="Never" />
     <disable_collisions link1="${prefix}link_3" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_3" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}link_4" link2="${prefix}link_5" reason="Adjacent" />
     <disable_collisions link1="${prefix}link_4" link2="${prefix}link_6" reason="Never" />
     <disable_collisions link1="${prefix}link_4" link2="${prefix}link_7" reason="Never" />
     <disable_collisions link1="${prefix}link_4" link2="${prefix}tool0" reason="Never" />
     <disable_collisions link1="${prefix}link_4" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_4" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}link_5" link2="${prefix}link_6" reason="Adjacent" />
     <disable_collisions link1="${prefix}link_5" link2="${prefix}link_7" reason="Never" />
     <disable_collisions link1="${prefix}link_5" link2="${prefix}tool0" reason="Never" />
     <disable_collisions link1="${prefix}link_5" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_5" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}link_6" link2="${prefix}link_7" reason="Adjacent" />
     <disable_collisions link1="${prefix}link_6" link2="${prefix}tool0" reason="Never" />
     <disable_collisions link1="${prefix}link_6" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_6" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}link_7" link2="${prefix}tool0" reason="Adjacent" />
     <disable_collisions link1="${prefix}link_7" link2="${prefix}link_gripper_finger_1" reason="Never" />
+    <disable_collisions link1="${prefix}link_7" link2="${prefix}link_gripper_finger_2" reason="Never" />
     <disable_collisions link1="${prefix}tool0" link2="${prefix}link_gripper_finger_1" reason="Adjacent" />
+    <disable_collisions link1="${prefix}link_gripper_finger_1" link2="${prefix}link_gripper_finger_2" reason="Never" />
+    <disable_collisions link1="${prefix}tool0" link2="${prefix}link_gripper_finger_2" reason="Adjacent" />
+    <disable_collisions link1="${prefix}link_gripper_finger_2" link2="${prefix}link_gripper_finger_1" reason="Never" />
     
   </xacro:macro>
 </robot>

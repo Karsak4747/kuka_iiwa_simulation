@@ -139,6 +139,38 @@
                     <param name="initial_value">0.0</param>
                 </state_interface>
             </joint>
+            <joint name="${prefix}joint_finger_1">
+                <command_interface name="${command_interface}" />
+                    <xacro:if value="${command_interface == 'position'}">
+                        <param name="min">0.0</param>
+                        <param name="max">0.033</param>
+                    </xacro:if>
+                <state_interface name="position">
+                    <param name="initial_value">${initial_positions['joint_finger_1']}</param>
+                </state_interface>
+                <state_interface name="velocity">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="effort">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+            </joint>
+            <joint name="${prefix}joint_finger_2">
+                <command_interface name="${command_interface}" />
+                    <xacro:if value="${command_interface == 'position'}">
+                        <param name="min">-0.033</param>
+                        <param name="max">0.0</param>
+                    </xacro:if>
+                <state_interface name="position">
+                    <param name="initial_value">${initial_positions['joint_finger_2']}</param>
+                </state_interface>
+                <state_interface name="velocity">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="effort">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+            </joint>
             <sensor name="${prefix}external_torque_sensor">
                 <state_interface name="external_torque.joint_a1">
                     <param name="initial_value">0.0</param>
@@ -159,6 +191,12 @@
                     <param name="initial_value">0.0</param>
                 </state_interface>
                 <state_interface name="external_torque.joint_a7">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="external_torque.joint_finger_1">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="external_torque.joint_finger_2">
                     <param name="initial_value">0.0</param>
                 </state_interface>
             </sensor>
