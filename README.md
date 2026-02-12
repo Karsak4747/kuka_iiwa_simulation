@@ -9,6 +9,10 @@ sudo xhost +
 docker-compose up -d
 docker exec -it ros2_iiwa bash
 ```
+## Запуск rviz c kuka iiwa
+```bash
+ros2 launch iiwa_bringup iiwa.launch.py use_planning:=true
+```
 
 # Остановка контейнера
 ```bash
