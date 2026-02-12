@@ -1,22 +1,17 @@
-Запускается командой
-```shell
-docker-compose up --build
+# Установка репозитория с github
+```bash
+git clone https://github.com/Karsak4747/kuka_iiwa_simulation.git
 ```
-Для Windows нужно установить эту программу https://sourceforge.net/projects/vcxsrv/
-Обязательно нужно поставить галочки:
-- Multiple windows
-- Display number: -1
-- Start no client
-- Clipboard
-- Disable access control
 
-Нстройка симуляции:
-1. Текущее положение звеньев
-```shell
-ros2 topic echo /joint_states
+# Запуск контейнера и вход в него
+```bash
+sudo xhost +
+docker-compose up -d
+docker exec -it ros2_iiwa bash
 ```
-2. Запуск траектории
-```shell
-cd ../trajectories
-python3 send_trajectory.py trajectory.yml
+
+# Остановка контейнера
+```bash
+docker-compose down
 ```
+
